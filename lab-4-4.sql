@@ -38,3 +38,51 @@
 -- +-------------------------------+------------+-------------+----------------------+
 
 
+
+
+-- WITH ORDERED_LIST AS (
+-- SELECT 
+-- t.name
+-- ,p.first_name
+-- ,p.last_name
+-- ,s.home_runs
+
+
+-- FROM stats s
+-- LEFT JOIN players p ON p.id = s.player_id
+-- LEFT JOIN teams t ON t.id = s.team_id
+-- WHERE 1=1
+-- AND t.year = 2019
+-- ORDER BY t.name ,s.home_runs DESC
+-- )
+
+-- SELECT 
+-- name
+-- ,first_name
+-- ,last_name
+-- ,MAX(home_runs)
+
+-- FROM ORDERED_LIST
+-- GROUP BY 1,2,3
+
+
+WITH X AS (
+SELECT 
+t.name
+,p.first_name
+,p.last_name
+,s.home_runs
+
+
+FROM stats s
+LEFT JOIN players p ON p.id = s.player_id
+LEFT JOIN teams t ON t.id = s.team_id
+WHERE 1=1
+AND t.year = 2019
+ORDER BY t.name ,s.home_runs DESC
+)
+
+SELECT 
+
+
+FROM X
