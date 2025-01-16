@@ -15,3 +15,15 @@
 -- +------+----------+
 
 
+SELECT 
+year
+,count(*)
+
+FROM teams
+GROUP BY 1
+ORDER BY 1
+
+
+
+
+

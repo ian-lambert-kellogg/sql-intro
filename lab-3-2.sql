@@ -40,3 +40,12 @@
 -- +-------------------------------+------------------+
 
 
+SELECT 
+name
+,avg(wins)
+
+FROM teams
+WHERE 1=1
+AND year > 2000
+GROUP BY 1
+ORDER BY 1

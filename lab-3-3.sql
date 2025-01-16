@@ -16,3 +16,14 @@
 -- | 2004 | St. Louis Cardinals           | 105       |
 
 
+SELECT
+year
+,name
+,MAX(wins)
+
+FROM teams
+WHERE 1=1
+AND year >= 1960
+GROUP BY 1,2
+ORDER BY MAX(wins) DESC
+LIMIT 61
