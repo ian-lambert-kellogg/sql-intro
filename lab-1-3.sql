@@ -9,3 +9,11 @@
 -- +------+----------------------+------+--------+
 
 
+SELECT
+year
+,name
+,wins 
+FROM teams
+ORDER BY 3 ASC
+LIMIT 3
+;
