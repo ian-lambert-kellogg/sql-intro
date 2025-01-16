@@ -10,3 +10,9 @@
 -- +------+-------------------+
 
 
+SELECT
+year
+,name
+FROM teams 
+WHERE 1=1
+AND park = 'Guaranteed Rate Field'
